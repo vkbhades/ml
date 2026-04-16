@@ -13,3 +13,8 @@ forecast = model_fit.forecast(steps=3)
 
 print("Forecasted Values:")
 print(forecast)
+
+plt.plot(df, label='Original')
+plt.plot(range(len(df), len(df) + 3), forecast, label='Forecast', color='red')
+plt.legend()
+plt.show()
